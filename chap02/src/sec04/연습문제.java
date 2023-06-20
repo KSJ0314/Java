@@ -14,8 +14,8 @@ public class 연습문제 {
 		System.out.print("나이를 입력하세요. : ");
 		int age = s.nextInt();
 		
-		System.out.println("순번 \t이름\t  나이");
-		System.out.printf("%-3d\t%s\t%4d\n", 1, name, age);
+		System.out.println("순번\t이름\t나이");
+		System.out.printf("%-3d\t%s\t%3d\n", 1, name, age);
 		
 		
 	}
