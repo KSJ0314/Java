@@ -11,7 +11,6 @@ public class KeyCodeExample {
 			System.out.println("keyCode : " + keyCode);
 			if (keyCode == 113) {
 				System.out.println("종료");
-				System.out.println("종료");
 				break;
 			}
 		}
