@@ -10,11 +10,11 @@ public class KeyCodeExample {
 			keyCode = System.in.read();
 			System.out.println("keyCode : " + keyCode);
 			if (keyCode == 113) {
+				System.out.println("종료");
 				break;
 			}
 		}
 		
-		System.out.println("종료");
 		
 		
 	}
