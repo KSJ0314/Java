@@ -14,7 +14,13 @@ public class 누적합계 {
 		int b = s.nextInt();
 
 		int result = 0;
-
+		for (int i = a; i <= b; i++) {
+			result += i;
+		}
+		System.out.println(result);
+		
+		
+		result = 0;
 		if ((b + a) % 2 == 1) {
 			result = (a + b) * (((b - a) / 2 + 1));
 		} else {
@@ -22,6 +28,7 @@ public class 누적합계 {
 		}
 		System.out.println(result);
 
+		
 		result = 0;
 		while (true) {
 			result += a++;
@@ -30,6 +37,8 @@ public class 누적합계 {
 			}
 		}
 		System.out.println(result);
+
+		
 
 	}
 
