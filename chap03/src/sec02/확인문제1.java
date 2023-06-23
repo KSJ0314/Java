@@ -12,6 +12,7 @@ public class 확인문제1 {
 		b = (byte) -b;
 		int result = 10 / b;
 		System.out.println(result);
+		System.out.println(result);
 
 	}
 
