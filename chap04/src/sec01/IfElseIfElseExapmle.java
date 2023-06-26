@@ -12,7 +12,7 @@ public class IfElseIfElseExapmle {
 		int score = s.nextInt();
 
 		if (score >= 90) {
-			System.out.println("점수가 100~90입니다.");
+			System.out.println("점수가 90~100입니다.");
 			System.out.println("등급은 A입니다.");
 		} else if (score >= 80) {
 			System.out.println("점수가 80~89입니다.");
