@@ -1,19 +1,29 @@
 package น้มุ;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
-		Scanner s = new Scanner(System.in);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-		int N = s.nextInt();
+		int T = Integer.parseInt(br.readLine());
+		StringTokenizer st;
 
-		for (int i = 0; i < N / 4; i++) {
-			System.out.print("long ");
+		for (int i = 0; i < T; i++) {
+			st = new StringTokenizer(br.readLine());
+			bw.write(Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken()));
 		}
-		System.out.println("int");
+
+		bw.flush();
+		bw.close();
 
 	}
 
