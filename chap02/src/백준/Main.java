@@ -1,29 +1,29 @@
 package น้มุ;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
+import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		Scanner s = new Scanner(System.in);
 
-		int T = Integer.parseInt(br.readLine());
-		StringTokenizer st;
+		int[] num = new int[9];
 
-		for (int i = 0; i < T; i++) {
-			st = new StringTokenizer(br.readLine());
-			bw.write(Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken()));
+		for (int i = 0; i < 9; i++) {
+			num[i] = s.nextInt();
 		}
+		int max = num[0];
+		int maxIndex = 1;
 
-		bw.flush();
-		bw.close();
+		for (int i = 1; i < 9; i++) {
+			if (max < num[i]) {
+				max = num[i];
+				maxIndex = i + 1;
+			}
+		}
+		System.out.println(max);
+		System.out.println(maxIndex);
 
 	}
 

@@ -42,18 +42,31 @@ public class 학습코드 {
 		int num1 = s.nextInt();
 		System.out.print("정수 입력 2 : ");
 		int num2 = s.nextInt();
-		
+
 		if (num1 > num2) {
 			int temp = num1;
 			num1 = num2;
 			num2 = temp;
 		}
 
+		int sum = 0;
+		for (int i = num1; i < num2; i++) {
+			System.out.printf("%d+", i);
+			sum += i;
+		}
+		sum += num2;
+		System.out.printf("%d=%d\n", num2, sum);
+
+		sum = 0;
 		for (int i = num1; i <= num2; i++) {
-			if (i % 2 == 1) {
-				System.out.println(i);
+			sum += i;
+			if (i == num2) {
+				System.out.printf("%d=%d", i, sum);
+			} else {
+				System.out.printf("%d+", i);
 			}
 		}
+
 
 	}
 
