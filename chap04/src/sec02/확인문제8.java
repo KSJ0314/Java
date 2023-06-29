@@ -18,6 +18,8 @@ public class 확인문제8 {
 			System.out.print("\n작업코드와 개수를 입력해 주세요. ");
 			String choice = br.readLine();
 			char chchoice = choice.charAt(0);
+			char a = choice.charAt(1);
+			int b = Character.getNumericValue(a);
 			
 			if (chchoice == 'C') {
 				break Outter;
