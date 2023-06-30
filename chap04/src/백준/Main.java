@@ -19,26 +19,26 @@ public class Main {
 
 		int N = Integer.parseInt(br.readLine());
 
-		int[] num = new int[N];
+		double[] arrGrade = new double[N];
 
+		st = new StringTokenizer(br.readLine());
 		for (int i = 0; i < N; i++) {
-			st = new StringTokenizer(br.readLine());
-			num[i] = Integer.parseInt(st.nextToken());
+			arrGrade[i] = Double.parseDouble(st.nextToken());
 		}
 
-		int min = num[0];
-		int max = num[0];
-
-		for (int i = 1; i <= N; i++) {
-			if (min > num[i]) {
-				min = num[i];
-			}
-			if (max < num[i]) {
-				max = num[i];
+		double max = arrGrade[0];
+		for (int i = 1; i < N; i++) {
+			if (max < arrGrade[i]) {
+				max = arrGrade[i];
 			}
 		}
-
-		System.out.printf("%d %d", min, max);
+		double sum = 0;
+		for (int i = 0; i < N; i++) {
+			arrGrade[i] = arrGrade[i] / max * 100;
+			sum += arrGrade[i];
+		}
+		double avg = sum / N;
+		System.out.println(avg);
 
 	}
 
