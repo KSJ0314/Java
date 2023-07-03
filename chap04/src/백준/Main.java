@@ -17,28 +17,20 @@ public class Main {
 
 		StringTokenizer st;
 
-		int N = Integer.parseInt(br.readLine());
+		int T = Integer.parseInt(br.readLine());
 
-		double[] arrGrade = new double[N];
-
-		st = new StringTokenizer(br.readLine());
-		for (int i = 0; i < N; i++) {
-			arrGrade[i] = Double.parseDouble(st.nextToken());
-		}
-
-		double max = arrGrade[0];
-		for (int i = 1; i < N; i++) {
-			if (max < arrGrade[i]) {
-				max = arrGrade[i];
+		for (int i = 0; i < T; i++) {
+			st = new StringTokenizer(br.readLine());
+			int R = Integer.parseInt(st.nextToken());
+			String S = st.nextToken();
+			for (int k = 0; k < S.length(); k++) {
+				for (int j = 0; j < R; j++) {
+					bw.write(String.valueOf(S.charAt(k)));
+				}
 			}
+			bw.newLine();
 		}
-		double sum = 0;
-		for (int i = 0; i < N; i++) {
-			arrGrade[i] = arrGrade[i] / max * 100;
-			sum += arrGrade[i];
-		}
-		double avg = sum / N;
-		System.out.println(avg);
+		bw.flush();
 
 	}
 
