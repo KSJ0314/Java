@@ -10,8 +10,6 @@ public class 배열8 {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		int[] lotto = new int[6];
-
 		int[] num = new int[45];
 		for (int i = 0; i < 45; i++) {
 			num[i] = i + 1;
@@ -25,13 +23,12 @@ public class 배열8 {
 			System.out.printf("\n--------%d회차--------\n ", i + 1);
 			for (int j = 0; j < 45; j++) {
 				int a = (int) (Math.random() * 45);
-				int temp = num[i];
-				num[i] = num[a];
+				int temp = num[j];
+				num[j] = num[a];
 				num[a] = temp;
 			}
 			for (int j = 0; j < 6; j++) {
-				lotto[j] = num[j];
-				System.out.printf("%2d ", lotto[j]);
+				System.out.printf("%2d ", num[j]);
 			}
 		}
 
