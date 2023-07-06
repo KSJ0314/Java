@@ -3,6 +3,7 @@ package น้มุ;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
 
@@ -10,38 +11,34 @@ public class Main {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		String S = br.readLine();
+		StringTokenizer st;
+		double grade = 0;
+		int W = 0;
 
-		char[] S2 = new char[S.length()];
-		int[] I = new int[26];
+		for (int i = 0; i < 20; i++) {
+			st = new StringTokenizer(br.readLine());
+			
+			String gar = st.nextToken();
+			double D = Double.parseDouble(st.nextToken());
+			String S = st.nextToken();
 
-		for (int i = 0; i < S2.length; i++) {
-			S2[i] = S.charAt(i);
-			if (S2[i] >= 97) {
-				S2[i] -= 32;
+			double D2 = 0.0;
+			
+			switch (S.charAt(0)) {
+				case 'A': D2++;
+				case 'B': D2++;
+				case 'C': D2++;
+				case 'D': D2++;
+				case 'F': W += D;
 			}
-			S2[i] -= 65;
-			I[S2[i]]++;
-		}
 
-		int max = 0;
-		for (int i = 0; i < I.length; i++) {
-			if (max < I[i]) {
-				max = I[i];
+			if (D2 != 0 && S.charAt(1) == '+') {
+				D2 += 0.5;
 			}
+			grade += D * D2;
 		}
-
-		char result = '0';
-		for (int i = 0; i < I.length; i++) {
-			if (I[i] == max) {
-				if (result == '0') {
-					result = (char) (i + 65);
-				} else {
-					result = '?';
-				}
-			}
-		}
-		System.out.println(result);
+		grade /= W;
+		System.out.println(grade);
 	}
 
 }
