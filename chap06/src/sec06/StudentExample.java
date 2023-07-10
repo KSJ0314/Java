@@ -9,7 +9,7 @@ public class StudentExample {
 		Scanner s = new Scanner(System.in);
 		
 		Student student = new Student();
-
+		
 		student.checkLogin();
 		while(true) {
 			
