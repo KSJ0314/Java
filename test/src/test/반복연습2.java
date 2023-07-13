@@ -1,8 +1,6 @@
 package test;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class 반복연습2 {
 
@@ -20,9 +18,9 @@ public class 반복연습2 {
 
 	}
 
-	public static void main(String[] args) throws IOException {
-
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	public static void main(String[] args) {
+		
+		Scanner s = new Scanner(System.in);
 
 		String[] game = { "가위", "바위", "보" };
 		String user = "", compu = "";
@@ -31,7 +29,7 @@ public class 반복연습2 {
 			System.out.println("가위 바위 보 중 하나를 선택하세요.");
 			System.out.println("그만을 입력하면 게임이 종료됩니다.");
 
-			user = br.readLine();
+			user = s.next();
 			compu = game[(int) (Math.random() * 3)];
 
 		} while (whoWin(user, compu));
