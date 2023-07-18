@@ -1,4 +1,4 @@
-package test;
+package 클래스연습문제;
 
 import java.util.Scanner;
 import java.util.StringTokenizer;

@@ -1,4 +1,4 @@
-package test;
+package 클래스연습문제;
 
 public class TV {
 	String company;
