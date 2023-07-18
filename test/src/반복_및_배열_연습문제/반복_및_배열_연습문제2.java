@@ -1,4 +1,4 @@
-package test;
+package 반복_및_배열_연습문제;
 
 import java.util.Scanner;
 
