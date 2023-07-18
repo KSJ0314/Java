@@ -1,9 +1,9 @@
 package 클래스연습문제;
 
 public class TV {
-	String company;
-	int years;
-	int size;
+	private String company;
+	private int years;
+	private int size;
 
 	public TV(String company, int years, int size) {
 		this.company = company;
