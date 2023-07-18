@@ -10,7 +10,7 @@ public class IPTV extends ColorTV {
 	}
 	
 	public void printProperty() {
-		System.out.println("IPTV 주소 : "+add+", " +size+"인치 "+ cost + "만원");
+		System.out.println("IPTV 주소 : "+add+", " +getSize()+"인치 "+ cost + "만원");
 	}
 
 
