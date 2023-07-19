@@ -18,13 +18,13 @@ public class Dictionary extends PairMap {
 	}
 
 	@Override
-	void put(String ket, String value) {
+	void put(String key, String value) {
 		for (int i = 0; i < KeyArray.length; i++) {
-			if (KeyArray[i] == null || KeyArray[i].isEmpty()) {
-				KeyArray[i] = ket;
+			if (KeyArray[i] == null) {
+				KeyArray[i] = key;
 				valueArray[i] = value;
 				break;
-			} else if (ket.equals(KeyArray[i])) {
+			} else if (key.equals(KeyArray[i])) {
 				valueArray[i] = value;
 				break;
 			}
@@ -34,7 +34,7 @@ public class Dictionary extends PairMap {
 	@Override
 	String delete(String key) {
 		for (int i = 0; i < KeyArray.length; i++) {
-			if (KeyArray[i].equals(key)) {
+			if (key.equals(KeyArray[i])) {
 				String returnValue = valueArray[i];
 				KeyArray[i] = null;
 				valueArray[i] = null;
@@ -48,7 +48,7 @@ public class Dictionary extends PairMap {
 	int length() {
 		int sum = 0;
 		for (int i = 0; i < KeyArray.length; i++) {
-			if (KeyArray[i] != null && !KeyArray[i].isEmpty()) {
+			if (KeyArray[i] != null) {
 				sum++;
 			}
 		}
