@@ -5,7 +5,10 @@ public abstract class Calc {
 	public int a;
 	public int b;
 	
-	public abstract void setValue(int num1, int num2);
+	public void setValue(int num1, int num2){
+		a = num1;
+		b = num2;
+	}
 	public abstract int calculate();
 	
 

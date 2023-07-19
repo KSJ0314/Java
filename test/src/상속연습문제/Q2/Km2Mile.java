@@ -2,15 +2,13 @@ package 상속연습문제.Q2;
 
 public class Km2Mile extends Converter {
 	
-	double div;
-
-	public Km2Mile(double div) {
-		this.div = div;
+	public Km2Mile(double ratio) {
+		this.ratio = ratio;
 	}
 
 	@Override
 	protected double convert(double src) {
-		return src/div;
+		return src/ratio;
 	}
 
 	@Override

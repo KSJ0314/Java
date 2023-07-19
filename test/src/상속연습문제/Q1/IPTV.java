@@ -2,7 +2,7 @@ package 상속연습문제.Q1;
 
 public class IPTV extends ColorTV {
 	
-	String add;
+	private String add;
 	
 	public IPTV(String add, int size, int cost) {
 		super(size, cost);
@@ -10,7 +10,8 @@ public class IPTV extends ColorTV {
 	}
 	
 	public void printProperty() {
-		System.out.println("IPTV 주소 : "+add+", " +getSize()+"인치 "+ cost + "만원");
+		System.out.print("IPTV 주소 : "+add+", ");
+		super.printProperty();
 	}
 
 

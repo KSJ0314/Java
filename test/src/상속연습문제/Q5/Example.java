@@ -25,8 +25,15 @@ public class Example {
 			case "*":
 				calc = new Mul();
 				break;
+			case "/":
+				if (b != 0 ) {
+					calc = new Div();
+				} else {
+					return;
+				}
+				break;
 			default:
-				calc = new Div();
+				return;
 		}
 		calc.setValue(a, b);
 		System.out.println(calc.calculate());
