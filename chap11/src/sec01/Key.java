@@ -19,6 +19,9 @@ public class Key {
 		return false;
 	}
 
+	public Key() {
+	}
+
 	@Override
 	public int hashCode() {
 		return number;
