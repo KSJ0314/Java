@@ -12,20 +12,11 @@ public class Q3 {
 
 		String st = sc.nextLine();
 
-		char[] stArr = new char[st.length()];
-		
-		for (int i = 0; i < st.length(); i++) {
-			stArr[i] = st.charAt(i);
-		}
-		
-		for (int j = 0; j < stArr.length; j++) {
-			char temp = stArr[0];
-			for (int i = 0; i < stArr.length-1; i++) {
-				stArr[i] = stArr[i+1];
-			}
-			stArr[stArr.length-1] = temp;
-			System.out.println(stArr);
-			
+		for (int j = 0; j < st.length(); j++) {
+			char a = st.charAt(0);
+			String b = st.substring(1);
+			st = b + a;
+			System.out.println(st);
 		}
 
 	}

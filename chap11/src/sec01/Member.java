@@ -2,22 +2,16 @@ package sec01;
 
 public class Member {
 	public String id;
+	public String name;
 
-	public Member(String id) {
+	public Member(String id, String name) {
 		this.id = id;
+		this.name = name;
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-
-		if (obj instanceof Member) {
-			Member member = (Member) obj;
-			// 매개변수 타입을 멤버 타입으로 강제 변환
-			if (id.equals(member.id)) {
-				return true;
-			}
-		}
-		return false;
+	public String toString() {
+		return id + ": " + name;
 	}
 
 }
